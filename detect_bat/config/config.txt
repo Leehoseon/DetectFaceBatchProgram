@@ -1,0 +1,7 @@
+url = jdbc:sqlserver://localhost:1433;
+DataBaseName = facedetect
+#주석
+user_name = detect 
+password = thdxlawkd
+gl_path_root= D:/detect_bat
+folderPath = D:/detect_bat/zface_files/tmp/

@@ -1,0 +1,7 @@
+JavaService -install "Detect Service" "C:\Program Files\Java\jdk1.8.0_144\jre\bin\server\jvm.dll" -Djava.class.path=.;D:\detect_bat\lib\sqljdbc4.jar;D:\detect_bat\lib\joda-time-2.9.9.jar;D:\detect_bat\lib\httpcore-4.4.6.jar;D:\detect_bat\lib\aws-java-sdk-rekognition-1.11.106.jar;D:\detect_bat\lib\httpclient-4.5.3.jar;D:\detect_bat\lib\jackson-annotations-2.9.0.jar;D:\detect_bat\lib\jackson-core-2.9.0.jar;D:\detect_bat\lib\jackson-databind-2.9.0.jar;D:\detect_bat\lib\commons-logging-1.1.1.jar;D:\detect_bat\lib\aws-java-sdk-rekognition-1.11.106.jar;D:\detect_bat\lib\aws-java-sdk-core-1.11.106.jar;D:\detect_bat\lib\aws-java-sdk-s3-1.11.106.jar;D:\detect_bat\classes -start DetectAlarmBat -current D:\detect_bat\classes
+
+net start "Detect Service"
+
+net stop "Detect Service"
+
+JavaService -uninstall "Detect Service"
