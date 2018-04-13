@@ -1,11 +1,4 @@
-/**
- * Name : CommUtil.java
- * Date : 2009.01.04
- * Auth : elTOV
- * Desc : 기본 유틸 모음
-*/
-
-
+﻿
 import java.io.*;
 import java.util.*;
 import java.util.Date;
