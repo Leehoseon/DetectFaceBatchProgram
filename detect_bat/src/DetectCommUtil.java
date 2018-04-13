@@ -22,69 +22,6 @@ public class DetectCommUtil{
 	String gl_path_root = "" ;
 	String folderPath =  "" ;
 
-    public String getDate(String nation, String date_type){
-        if(date_type == null) return null;
-        Calendar calendar = Calendar.getInstance();
-
-        String nation_code = "Asia/Seoul";
-
-        if(nation.equals("SIN")) nation_code = "Asia/Singapore";
-        else if(nation.equals("CHN")) nation_code = "Asia/Shanghai";
-    
-        SimpleTimeZone timezone=new SimpleTimeZone(9*60*60*1000,nation_code);
-        calendar = Calendar.getInstance(timezone);
-        Date date=calendar.getTime();
-    
-        SimpleDateFormat sdf = new SimpleDateFormat(date_type,Locale.KOREA);
-        sdf.setTimeZone(timezone);
-
-        return sdf.format(date);
-    }
-
-    public String getDate(String nation, String date_type,int prevday,int nextday) throws Exception{
-        if(date_type == null) return null;
-        Calendar calendar = Calendar.getInstance();
-
-        String nation_code = "Asia/Seoul";
-
-        if(nation.equals("SIN")) nation_code = "Asia/Singapore";
-        else if(nation.equals("CHN")) nation_code = "Asia/Shanghai";
-    
-        SimpleTimeZone timezone=new SimpleTimeZone(9*60*60*1000,nation_code);
-        calendar = Calendar.getInstance(timezone);
-
-        if(prevday != 0){
-            calendar.add(Calendar.DATE, prevday);
-        }else if(nextday != 0){
-            calendar.add(Calendar.DATE, nextday);
-        } 
-
-        Date date=calendar.getTime();
-    
-        SimpleDateFormat sdf = new SimpleDateFormat(date_type,Locale.KOREA);
-        sdf.setTimeZone(timezone);
-
-        return sdf.format(date);
-    }
-
-	public String getDebugDate(String nation, String date_type){
-		if(date_type == "") date_type = "yyyy-MM-dd HH:mm:ss";
-		Calendar calendar = Calendar.getInstance();
-
-		String nation_code = "Asia/Seoul";
-
-		if(nation.equals("SIN")) nation_code = "Asia/Singapore";
-		else if(nation.equals("CHN")) nation_code = "Asia/Shanghai";
-
-		SimpleTimeZone timezone=new SimpleTimeZone(9*60*60*1000,nation_code);
-		calendar = Calendar.getInstance(timezone);
-		Date date=calendar.getTime();
-
-		SimpleDateFormat sdf = new SimpleDateFormat(date_type,Locale.KOREA);
-		sdf.setTimeZone(timezone);
-
-		return sdf.format(date);
-    }
 
 	public String setMoveFile(String oldfile,String newfile,boolean isdel){
         String strret = "FAIL";
